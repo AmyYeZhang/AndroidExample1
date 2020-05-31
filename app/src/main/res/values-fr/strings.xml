@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">Lab1</string>
-    <string name="hello_message">Bonjour</string>
-    <string name="ButtonText">I\'m a French button</string>
+    <string name="app_name">Lab2</string>
+    <string name="text_message">Regardez mon GUI</string>
+    <string name="button_message">Cliquez ici</string>
+    <string name="checkbox_message">Regarde ça!</string>
+    <string name="switch_message">Allumer / éteindre</string>
+    <string name="edit_hint">Écrivez ici</string>
+    <string name="toast_message">Voici plus d\'informations</string>
+    <string name="on_msg">L\'interrupteur est maintenant activé</string>
+    <string name="off_msg">L\'interrupteur est maintenant éteint</string>
 </resources>
