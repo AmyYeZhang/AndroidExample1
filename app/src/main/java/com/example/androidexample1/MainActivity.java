@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox cb1 = findViewById(R.id.checkbox1);
         cb1.setOnCheckedChangeListener((cb, b) ->
-            {Snackbar.make(cb1, b?R.string.on_msg:R.string.off_msg, Snackbar.LENGTH_LONG).setAction("Undo", click->cb1.setChecked(!b)).show();});
+            {Snackbar.make(cb1, b?R.string.on_msg:R.string.off_msg, Snackbar.LENGTH_LONG).setAction(R.string.undo_msg, click->cb1.setChecked(!b)).show();});
 
         Switch sw1 = findViewById(R.id.switch1);
         sw1.setOnCheckedChangeListener((cb, b) ->
-            {Snackbar.make(sw1, b?R.string.on_msg:R.string.off_msg, Snackbar.LENGTH_LONG).setAction("Undo", click->sw1.setChecked(!b)).show();});
+            {Snackbar.make(sw1, b?R.string.on_msg:R.string.off_msg, Snackbar.LENGTH_LONG).setAction(R.string.undo_msg, click->sw1.setChecked(!b)).show();});
     }
 }
