@@ -2,9 +2,13 @@ package com.example.androidexample1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -14,20 +18,36 @@ import java.util.ResourceBundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    private SharedPreferences prefs = null;
+    private EditText emailEdit = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_relative);
+        setContentView(R.layout.activity_main_lab3);
+        onPause();
 
-        Button btn1 = findViewById(R.id.button1);
-        btn1.setOnClickListener(v -> Toast.makeText(this, R.string.toast_message, Toast.LENGTH_LONG).show());
+        Button loginBtn = findViewById(R.id.loginBtn);
+        loginBtn.setOnClickListener(v ->
+            {   saveSharedPrefs(emailEdit.getText().toString());
+                Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
+                goToProfile.putExtra("lab3email", emailEdit.getText().toString());
+                startActivity(goToProfile);
+            });
+    }
 
-        CheckBox cb1 = findViewById(R.id.checkbox1);
-        cb1.setOnCheckedChangeListener((cb, b) ->
-            {Snackbar.make(cb1, b?R.string.on_msg:R.string.off_msg, Snackbar.LENGTH_LONG).setAction("Undo", click->cb1.setChecked(!b)).show();});
+    @Override
+    protected void onPause() {
+        super.onPause();
+        prefs = getSharedPreferences("lab3email", Context.MODE_PRIVATE);
+        String savedString = prefs.getString("emailaddr", "");
+        emailEdit = findViewById(R.id.emailEdit);
+        emailEdit.setText(savedString);
+    }
 
-        Switch sw1 = findViewById(R.id.switch1);
-        sw1.setOnCheckedChangeListener((cb, b) ->
-            {Snackbar.make(sw1, b?R.string.on_msg:R.string.off_msg, Snackbar.LENGTH_LONG).setAction("Undo", click->sw1.setChecked(!b)).show();});
+    private void saveSharedPrefs(String stringToSave) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("emailaddr", stringToSave);
+        editor.commit();
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab2</string>
+    <string name="app_name">Lab3</string>
     <string name="text_message">Regardez mon GUI</string>
     <string name="button_message">Cliquez ici</string>
     <string name="checkbox_message">Regarde ça!</string>
@@ -8,4 +8,17 @@
     <string name="toast_message">Voici plus d\'informations</string>
     <string name="on_msg">L\'interrupteur est maintenant activé</string>
     <string name="off_msg">L\'interrupteur est maintenant éteint</string>
+
+    <string name="emailtext">Entrez votre adresse email:</string>
+    <string name="emailedit">Saisissez votre e-mail ici</string>
+    <string name="pwdtext">Tapez votre mot de passe:</string>
+    <string name="loginbtn">S\'identifier</string>
+
+    <string name="profiletext">Votre profil</string>
+    <string name="nametext">Votre nom:</string>
+    <string name="nameedit">Entrez votre nom</string>
+    <string name="emailtext2">Votre email:</string>
+    <string name="emailedit2">Entrer votre Email</string>
+    <string name="pictext">Ta photo:</string>
+    <string name="pictext2">Cliquez sur le bouton ci-dessus pour prendre une photo</string>
 </resources>
