@@ -20,18 +20,22 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences prefs = null;
     private EditText emailEdit = null;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_lab3);
-        onPause();
+
+        prefs = getSharedPreferences("lab3email", Context.MODE_PRIVATE);
+        emailEdit = findViewById(R.id.emailEdit);
+        emailEdit.setText(prefs.getString("emailaddr", ""));
 
         Button loginBtn = findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(v ->
-            {   saveSharedPrefs(emailEdit.getText().toString());
+            {
                 Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
-                goToProfile.putExtra("lab3email", emailEdit.getText().toString());
+                goToProfile.putExtra("email", emailEdit.getText().toString());
                 startActivity(goToProfile);
             });
     }
@@ -39,15 +43,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        prefs = getSharedPreferences("lab3email", Context.MODE_PRIVATE);
-        String savedString = prefs.getString("emailaddr", "");
-        emailEdit = findViewById(R.id.emailEdit);
-        emailEdit.setText(savedString);
-    }
-
-    private void saveSharedPrefs(String stringToSave) {
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("emailaddr", stringToSave);
+        editor = prefs.edit();
+        editor.putString("emailaddr", emailEdit.getText().toString());
         editor.commit();
     }
+
 }
