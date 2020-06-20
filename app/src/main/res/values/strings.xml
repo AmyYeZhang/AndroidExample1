@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab3</string>
+    <string name="app_name">Lab4</string>
     <string name="text_message">Look at my GUI</string>
     <string name="button_message">Click here</string>
     <string name="checkbox_message">Check this out!</string>
@@ -9,6 +9,7 @@
     <string name="on_msg">The switch is now on</string>
     <string name="off_msg">The switch is now off</string>
 
+    <!--Lab3-->
     <string name="emailtext">Enter your email address:</string>
     <string name="emailedit">Type email here</string>
     <string name="pwdtext">Type your password:</string>
@@ -21,4 +22,10 @@
     <string name="emailedit2">Enter your email</string>
     <string name="pictext">Your picture:</string>
     <string name="pictext2">Click the button above to take a picture</string>
+
+    <!--Lab4-->
+    <string name="btnChat">Go to chat</string>
+    <string name="btnSend">Send</string>
+    <string name="btnReceive">Receive</string>
+    <string name="chatHint">Type here</string>
 </resources>

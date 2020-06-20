@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab3</string>
+    <string name="app_name">Lab4</string>
     <string name="text_message">Regardez mon GUI</string>
     <string name="button_message">Cliquez ici</string>
     <string name="checkbox_message">Regarde ça!</string>
@@ -9,6 +9,7 @@
     <string name="on_msg">L\'interrupteur est maintenant activé</string>
     <string name="off_msg">L\'interrupteur est maintenant éteint</string>
 
+    <!--Lab3-->
     <string name="emailtext">Entrez votre adresse email:</string>
     <string name="emailedit">Saisissez votre e-mail ici</string>
     <string name="pwdtext">Tapez votre mot de passe:</string>
@@ -21,4 +22,10 @@
     <string name="emailedit2">Entrer votre Email</string>
     <string name="pictext">Ta photo:</string>
     <string name="pictext2">Cliquez sur le bouton ci-dessus pour prendre une photo</string>
+
+    <!--lab4-->
+    <string name="btnChat">Aller au chat</string>
+    <string name="btnSend">Envoyer</string>
+    <string name="btnReceive">Recevoir</string>
+    <string name="chatHint">Écrivez ici</string>
 </resources>

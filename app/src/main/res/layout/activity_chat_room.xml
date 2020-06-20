@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listviewChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:layout_above="@+id/bottomRL"/>
+
+
+    <RelativeLayout
+        android:id="@+id/bottomRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/btnSend"/>
+        <EditText
+            android:id="@+id/editChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnSend"
+            android:layout_toLeftOf="@+id/btnReceive"
+            android:hint="@string/chatHint"/>
+        <Button
+            android:id="@+id/btnReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/btnReceive"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
