@@ -48,7 +48,7 @@ public class ChatRoomActivity extends AppCompatActivity {
 
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setTitle("Do you want to delete this?")
-                    .setMessage("The selected row is: " + (position+1) + "\nThe database id is:" + id)
+                    .setMessage("The selected row is: " + position + "\nThe database id is:" + id)
                     .setPositiveButton("Yes", (click, arg)->{
                         elements.remove(position);
                         myAdapter.notifyDataSetChanged();
@@ -103,6 +103,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     class ChatMessge {
         private boolean isSend;
         private String msg;
+        private long id;
 
         public ChatMessge(boolean isSend, String msg){
             setIsSend(isSend);
@@ -124,5 +125,9 @@ public class ChatRoomActivity extends AppCompatActivity {
         private void setMsg(String msg){
             this.msg = msg;
         }
+
+        public long getId() { return id; }
+
+        private void setId(long id) { this.id = id; }
     }
 }
