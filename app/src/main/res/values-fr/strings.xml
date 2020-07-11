@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab4</string>
+    <string name="app_name">Lab6</string>
     <string name="text_message">Regardez mon GUI</string>
     <string name="button_message">Cliquez ici</string>
     <string name="checkbox_message">Regarde ça!</string>
@@ -28,4 +28,11 @@
     <string name="btnSend">Envoyer</string>
     <string name="btnReceive">Recevoir</string>
     <string name="chatHint">Écrivez ici</string>
+
+    <!--Lab6-->
+    <string name="btnWeather"> Prévisions Météorologiques</string>
+    <string name="tvCurrent"> Température Actuelle: </string>
+    <string name="tvMin"> Température Mini: </string>
+    <string name="tvMax"> Température Max: </string>
+    <string name="tvUV"> Indice UV: </string>
 </resources>

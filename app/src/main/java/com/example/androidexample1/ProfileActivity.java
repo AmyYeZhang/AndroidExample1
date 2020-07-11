@@ -34,6 +34,9 @@ public class ProfileActivity extends AppCompatActivity {
         Button btnChat = findViewById(R.id.btnChat);
         btnChat.setOnClickListener(v-> startActivity(new Intent(ProfileActivity.this, ChatRoomActivity.class)));
 
+        Button btnWeather = findViewById(R.id.btnWeather);
+        btnWeather.setOnClickListener(v-> startActivity(new Intent(ProfileActivity.this, WeatherForecast.class)));
+
     }
 
     private void dispatchTakePictureIntent() {

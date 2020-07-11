@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab4</string>
+    <string name="app_name">Lab6</string>
     <string name="text_message">Look at my GUI</string>
     <string name="button_message">Click here</string>
     <string name="checkbox_message">Check this out!</string>
@@ -28,4 +28,11 @@
     <string name="btnSend">Send</string>
     <string name="btnReceive">Receive</string>
     <string name="chatHint">Type here</string>
+
+    <!--Lab6-->
+    <string name="btnWeather"> Weather Forecast</string>
+    <string name="tvCurrent"> Current Temperature: </string>
+    <string name="tvMin"> Min Temperature: </string>
+    <string name="tvMax"> Max Temperature: </string>
+    <string name="tvUV"> UV Rating: </string>
 </resources>
