@@ -1,62 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/profiletext"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/nametext"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profiletext"
+            android:textSize="10dp"/>
 
-    <EditText
-        android:id="@+id/nameEdit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/nameedit"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nametext"
+            android:textSize="10dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/emailtext2"/>
+        <EditText
+            android:id="@+id/nameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nameedit"
+            android:textSize="10dp"/>
 
-    <EditText
-        android:id="@+id/emailEdit2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/emailedit2"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/emailtext2"
+            android:textSize="10dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pictext"/>
+        <EditText
+            android:id="@+id/emailEdit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/emailedit2"
+            android:textSize="10dp"/>
 
-    <ImageButton
-        android:id="@+id/picBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/picture_frame"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pictext"
+            android:textSize="10dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pictext2"/>
+        <ImageButton
+            android:id="@+id/picBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/picture_frame"/>
 
-    <Button
-        android:id="@+id/btnChat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btnChat"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pictext2"
+            android:textSize="10dp"/>
 
-    <Button
-        android:id="@+id/btnWeather"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btnWeather"/>
+        <Button
+            android:id="@+id/btnChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnChat"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnWeather"/>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:deviceIds="wear"
     android:orientation="vertical">
 
-    <androidx.wear.widget.BoxInsetLayout
+    <LinearLayout
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:id="@+id/ivWeather"/>
 
         <TextView
@@ -47,6 +50,6 @@
             android:layout_height="wrap_content"
             android:visibility="invisible"
             style="?android:attr/progressBarStyleHorizontal" />
-    </androidx.wear.widget.BoxInsetLayout>
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>
