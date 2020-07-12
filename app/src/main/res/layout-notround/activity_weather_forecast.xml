@@ -14,30 +14,35 @@
         <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_gravity="center"
             android:id="@+id/ivWeather"/>
 
         <TextView
             android:id="@+id/tvCurrent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/tvCurrent"/>
 
         <TextView
             android:id="@+id/tvMin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/tvMin"/>
 
         <TextView
             android:id="@+id/tvMax"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/tvMax"/>
 
         <TextView
             android:id="@+id/tvUV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/tvUV"/>
 
         <ProgressBar
