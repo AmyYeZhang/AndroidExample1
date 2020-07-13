@@ -49,7 +49,7 @@ public class ChatRoomActivity extends AppCompatActivity {
             editChat.setText("");
         });
 
-        chatList.setOnItemLongClickListener(((parent, view, position, id) -> {
+        chatList.setOnItemLongClickListener((parent, view, position, id) -> {
 
             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
             alertBuilder.setTitle("Do you want to delete this?")
@@ -64,7 +64,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                     .create().show();
 
             return true;
-        }));
+        });
 
     }
 
