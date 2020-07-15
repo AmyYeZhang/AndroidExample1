@@ -2,7 +2,12 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <ListView
         android:id="@+id/listviewChat"
@@ -24,20 +29,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="@string/btnSend"/>
+            android:text="@string/btnSend"
+            android:nextFocusRight="@id/editChat"
+            android:nextFocusLeft="@id/btnReceive"/>
         <EditText
             android:id="@+id/editChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/btnSend"
             android:layout_toLeftOf="@+id/btnReceive"
-            android:hint="@string/chatHint"/>
+            android:hint="@string/chatHint"
+            android:nextFocusRight="@id/btnReceive"
+            android:nextFocusLeft="@id/btnSend"/>
         <Button
             android:id="@+id/btnReceive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="@string/btnReceive"/>
+            android:text="@string/btnReceive"
+            android:nextFocusRight="@id/btnSend"
+            android:nextFocusLeft="@id/editChat"/>
 
     </RelativeLayout>
 

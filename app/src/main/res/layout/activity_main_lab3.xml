@@ -2,7 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,7 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/emailedit"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:nextFocusDown="@id/pwdEdit"
+        android:nextFocusUp="@id/loginBtn"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -27,12 +34,16 @@
         android:id="@+id/pwdEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:nextFocusDown="@id/loginBtn"
+        android:nextFocusUp="@id/emailEdit"/>
 
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/loginbtn"/>
+        android:text="@string/loginbtn"
+        android:nextFocusDown="@id/emailEdit"
+        android:nextFocusUp="@id/pwdEdit"/>
 
 </LinearLayout>
