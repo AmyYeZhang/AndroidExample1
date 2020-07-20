@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -35,6 +36,8 @@ public class ChatRoomActivity extends AppCompatActivity {
         loadDataFromDatabase(); //get any previously saved Contact objects
         chatList.setAdapter(myAdapter);
 
+        boolean isTablet = findViewById(R.id.frame) != null;
+
         EditText editChat = findViewById(R.id.editChat);
 
         Button btnSend = findViewById(R.id.btnSend);
@@ -58,6 +61,12 @@ public class ChatRoomActivity extends AppCompatActivity {
                         deleteMsgFromDatabase(id);
                         msgList.remove(position);
                         myAdapter.notifyDataSetChanged();
+                        if(isTablet){
+                            if (getSupportFragmentManager().findFragmentById(R.id.frame) != null)
+                                getSupportFragmentManager().beginTransaction().
+                                        remove(getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
+
+                        }
                     })
                     .setNegativeButton("No", (click, agr)->{})
                     //.setView(getLayoutInflater().inflate(R.layout.send_layout, null))
@@ -65,6 +74,26 @@ public class ChatRoomActivity extends AppCompatActivity {
 
             return true;
         });
+
+        chatList.setOnItemClickListener(((parent, view, position, id) -> {
+            Bundle dataToPass = new Bundle();
+            dataToPass.putString("msg", msgList.get(position).getMsg());
+            dataToPass.putString("id", Long.toString(id));
+            dataToPass.putBoolean("isSend", msgList.get(position).getIsSend()==true);
+
+            if(isTablet) {
+                DetailsFragment fragment = new DetailsFragment();
+                fragment.setArguments(dataToPass);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame, fragment).commit();
+
+            } else {
+                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+                nextActivity.putExtras(dataToPass);
+                startActivity(nextActivity);
+            }
+
+        }));
 
     }
 

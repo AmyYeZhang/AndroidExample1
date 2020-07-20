@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab6</string>
+    <string name="app_name">Lab7</string>
     <string name="text_message">Look at my GUI</string>
     <string name="button_message">Click here</string>
     <string name="checkbox_message">Check this out!</string>
@@ -35,4 +35,8 @@
     <string name="tvMin"> Min Temperature: </string>
     <string name="tvMax"> Max Temperature: </string>
     <string name="tvUV"> UV Rating: </string>
+
+    <!--Lab7-->
+    <string name="cbIsSend">Is a Send Message</string>
+    <string name="btnHide">HIDE</string>
 </resources>

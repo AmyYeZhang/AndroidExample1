@@ -6,17 +6,19 @@
 
     <ListView
         android:id="@+id/listviewChat"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
         android:transcriptMode="alwaysScroll"
         android:stackFromBottom="true"
+        android:layout_alignParentLeft="true"
         android:layout_above="@+id/bottomRL"/>
 
 
     <RelativeLayout
         android:id="@+id/bottomRL"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true">
 
         <Button
@@ -40,5 +42,11 @@
             android:text="@string/btnReceive"/>
 
     </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/listviewChat"/>
 
 </RelativeLayout>
