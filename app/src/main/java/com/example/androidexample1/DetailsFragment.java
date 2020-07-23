@@ -1,5 +1,6 @@
 package com.example.androidexample1;
 
+import android.app.PendingIntent;
 import android.content.Context;
 import android.os.Bundle;
 
@@ -43,6 +44,10 @@ public class DetailsFragment extends Fragment {
         btnHide.setOnClickListener(v -> {
             //Tell the parent activity to remove
             parentActivity.getSupportFragmentManager().beginTransaction().remove(this).commit();
+            if(parentActivity instanceof EmptyActivity){
+                //if use the phone, close fragment, back to chat room
+                parentActivity.finish();
+            }
         });
 
         return result;
