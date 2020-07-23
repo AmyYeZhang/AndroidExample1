@@ -1,6 +1,5 @@
 package com.example.androidexample1;
 
-import android.app.PendingIntent;
 import android.content.Context;
 import android.os.Bundle;
 
